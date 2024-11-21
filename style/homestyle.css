@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #493628;
+    color: #E4E0E1;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 100px auto;
+    width: 60%;
+}
+
+.recipe-card{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #000;
+    transition: transform 0.5s ease-in-out;
+}
+
+.recipe-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recipe-card .overlay{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.recipe-card:hover img{
+    transform: scale(1.1);
+}
+
+.recipe-card:hover .overlay{
+    opacity: 1;
+}
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-card{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
