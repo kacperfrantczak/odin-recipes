@@ -107,3 +107,14 @@ a{
 a:hover{
     color: #FFC300;
 }
+
+@media (max-width: 768px) {
+    .recipe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-image, .recipe-content {
+        max-width: 100%;
+    }
+}
